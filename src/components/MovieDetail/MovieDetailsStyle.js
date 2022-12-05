@@ -22,6 +22,7 @@ const DetailsContainer = styled.div`
     padding: 0;
     flex-direction: column;
     height: 100vh !important;
+    margin-bottom: 15rem;
   }
   @media screen and (max-width: 375px) {
     width: 100%;

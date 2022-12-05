@@ -9,7 +9,7 @@ const Languages = styled.div`
   line-height: 1.75rem !important;
   font-weight: 600 !important;
   /* padding: 3rem 0 5rem 0 !important; */
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 
   .active {
     color: #f96e85 !important;

@@ -8,7 +8,7 @@ const NavBar = styled.header`
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  padding: 0 3rem 3rem;
+  padding: 0 3rem 2rem;
   box-sizing: border-box;
 
   a {
