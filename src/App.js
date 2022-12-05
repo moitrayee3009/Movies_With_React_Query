@@ -1,35 +1,28 @@
-import React, { Suspense } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import React, { Fragment, Suspense } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Footer from './components/Footer/Footer'
+import Navbar from './components/Navbar/Navbar'
 
-const List = React.lazy(() => import('./components/List/List'))
-const Details = React.lazy(() => import('./components/Details/Details'))
+const MovieList = React.lazy(() => import('./components/MovieList/MovieList'))
+const MovieDetail = React.lazy(() =>
+  import('./components/MovieDetail/MovieDetail')
+)
 
-function App() {
+function App({ movieId }) {
   return (
-    <div>
+    <Fragment>
       <Suspense fallback={<div>Loading...</div>}>
         <BrowserRouter>
-          <Switch>
-            <Route exact path='/List' componentt={List} />
-            <Route exact path='/Details' component={Details} />
-            <Route exact path='/' component={List} />
-          </Switch>
+          <Navbar />
+          <Routes>
+            <Route path='/:movieId' element={<MovieDetail />} />
+            <Route path='/' element={<MovieList />} />
+          </Routes>
         </BrowserRouter>
       </Suspense>
-    </div>
+      <Footer />
+    </Fragment>
   )
 }
 
 export default App
-
-// import './App.css'
-
-// function App() {
-//   return (
-//     <div className='App'>
-//       <header className='App-header'></header>
-//     </div>
-//   )
-// }
-
-// export default App
