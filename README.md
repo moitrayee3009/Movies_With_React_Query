@@ -1,6 +1,6 @@
 # Movies
 
-[Demo](https://movies_with_react_query.surge.sh)
+## [Demo](https://movies_with_react_query.surge.sh)
 
 A responsive movie site using TMDB API and React.js . The target was to build
 a web application where Movie data can be displayed.
