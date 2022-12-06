@@ -17,6 +17,7 @@ a web application where Movie data can be displayed.
 
 - Pagination
 - Translation
+- Responsive
 
 To run the project in development mode, you need your own API Key.
 Get API key from - <https://www.themoviedb.org/>
@@ -27,12 +28,12 @@ You need to create .env and add REACT_APP_API_KEY=your-api
 
 ### Home Page
 
-![movie list ](src/assets/Screenshot/MovieList-view.png =100x50)
+`<img src="src/assets/Screenshot/MovieList-view.png" width="150" height="280">`
 
 ### Movie Details Page
 
-![movie details](src/assets/Screenshot/MovieDetails-view.png =100x50)
+`<img src="src/assets/Screenshot/MovieList-view.png" width="150" height="280">`
 
 ### Mobile View
 
-![small screen](src/assets//Screenshot/DetailsMobileView.png =100x50)
+`<img src="src/assets//Screenshot/DetailsMobileView.png" width="150" height="280">`
