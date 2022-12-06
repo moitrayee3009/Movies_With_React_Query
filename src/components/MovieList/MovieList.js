@@ -26,11 +26,7 @@ const MovieList = (props) => {
 
   const { isLoading, data, isError, error } = useQuery(
     ['movie-data', currentPageNumber, language],
-    getAllMovies,
-    {
-      refetchInterval: false,
-      refetchIntervalInBackground: false
-    }
+    getAllMovies
   )
   // debugger
 

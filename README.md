@@ -1,5 +1,7 @@
 # Movies
 
+[Demo](https://movies_with_react_query.surge.sh)
+
 A responsive movie site using TMDB API and React.js . The target was to build
 a web application where Movie data can be displayed.
 
@@ -26,17 +28,3 @@ To run the project in development mode, you need your own API Key.
 Get API key from - <https://www.themoviedb.org/>
 
 You need to create .env and add REACT_APP_API_KEY=your-api
-
-## Screenshots
-
-### Home Page
-
-![movie list ](src/assets/Screenshot/MovieList-view.png)
-
-### Movie Details Page
-
-![movie details](src/assets/Screenshot/MovieDetails-view.png)
-
-### Mobile View
-
-![small screen](src/assets//Screenshot/DetailsMobileView.png)
