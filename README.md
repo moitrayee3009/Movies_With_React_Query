@@ -1,6 +1,7 @@
 # Movies
 
-A responsive movie site using TMDB Api and React.js . The target was to build a webapplication where real Movie data can be displayed.
+A responsive movie site using TMDB API and React.js . The target was to build
+a web application where Movie data can be displayed.
 
 ## Libraries and Technologies
 
