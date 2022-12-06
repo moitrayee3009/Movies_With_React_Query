@@ -6,12 +6,12 @@ a web application where Movie data can be displayed.
 ## Libraries and Technologies
 
 - The Movie Database (TMDb) API
-- Uses React, including React Hooks
-- Uses axios for data fetching
-- Uses React Router Dom for routing
-- Uses React Query for caching API responses
+- React, including React Hooks
+- axios for data fetching
+- React Router Dom for routing
+- React Query for caching API responses
 - Styled with Styled Components
-- Uses FontAwesome for React
+- FontAwesome for React
 
 ## Features
 
