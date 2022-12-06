@@ -28,12 +28,12 @@ You need to create .env and add REACT_APP_API_KEY=your-api
 
 ### Home Page
 
-`<img src="src/assets/Screenshot/MovieList-view.png" width="150" height="280">`
+![movie list ](src/assets/Screenshot/MovieList-view.png)
 
 ### Movie Details Page
 
-`<img src="src/assets/Screenshot/MovieList-view.png" width="150" height="280">`
+![movie details](src/assets/Screenshot/MovieDetails-view.png)
 
 ### Mobile View
 
-`<img src="src/assets//Screenshot/DetailsMobileView.png" width="150" height="280">`
+![small screen](src/assets//Screenshot/DetailsMobileView.png)
