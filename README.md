@@ -15,9 +15,12 @@ a web application where Movie data can be displayed.
 
 ## Features
 
+- Scalable
 - Pagination
-- Translation
-- Responsive
+- Language Translation
+- React Routing
+- Responsive Design
+- Reusable Component
 
 To run the project in development mode, you need your own API Key.
 Get API key from - <https://www.themoviedb.org/>
