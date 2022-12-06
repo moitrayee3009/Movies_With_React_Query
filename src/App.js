@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import { Spinner } from './components/Spinner'
 
 const MovieList = React.lazy(() => import('./components/MovieList/MovieList'))
 const MovieDetail = React.lazy(() =>
@@ -16,7 +17,13 @@ function App({ movieId }) {
   return (
     <QueryClientProvider client={queryClient}>
       <Fragment>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense
+          fallback={
+            <div>
+              <Spinner />
+            </div>
+          }
+        >
           <BrowserRouter>
             <Navbar />
             <Routes>
