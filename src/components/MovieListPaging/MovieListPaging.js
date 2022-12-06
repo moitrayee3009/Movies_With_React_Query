@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Previous, Next, Paging, PageNumber } from './MovieListPagingStyle'
 
-const MovieListPaging = ({ setCurrentPageNumber, currentPageNumber }) => {
-  //let pageList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  const [pageList, setPageList] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+const MovieListPaging = ({
+  setCurrentPageNumber,
+  currentPageNumber,
+  pageList,
+  setPageList
+}) => {
+  //const [pageList, setPageList] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+  // const [selectedPageNumber, setSelectedPageNumber] = useState(currentPageNumber)
 
   const movePageLeftRight = (action) => {
     if (action === 'prev' && currentPageNumber > 1) {
@@ -15,8 +20,18 @@ const MovieListPaging = ({ setCurrentPageNumber, currentPageNumber }) => {
     }
   }
 
+  // useEffect(() => {
+  //   setPageList(
+  //     pageList.map((item) => {
+  //       return item + Math.floor(currentPageNumber / 2)
+  //     })
+  //   )
+  // }, [])
+
   const managePageList = (pageNum) => {
+    // debugger
     setCurrentPageNumber(pageNum)
+    //setSelectedPageNumber(pageNum)
 
     let maxNumber = Math.max(...pageList)
     let minNumber = Math.min(...pageList)

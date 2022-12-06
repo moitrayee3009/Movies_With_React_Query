@@ -5,7 +5,7 @@ const Paging = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1.75rem;
   font-weight: 600;
   margin: 3rem 0 5rem 0;
@@ -13,6 +13,10 @@ const Paging = styled.div`
   .active {
     color: #f96e85;
     font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 3rem;
   }
 `
 const Previous = styled.div`

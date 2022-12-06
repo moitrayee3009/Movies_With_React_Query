@@ -2,6 +2,8 @@ import React, { Fragment, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 const MovieList = React.lazy(() => import('./components/MovieList/MovieList'))
 const MovieDetail = React.lazy(() =>
@@ -9,19 +11,24 @@ const MovieDetail = React.lazy(() =>
 )
 
 function App({ movieId }) {
+  let queryClient = new QueryClient()
+
   return (
-    <Fragment>
-      <Suspense fallback={<div>Loading...</div>}>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path='/:movieId' element={<MovieDetail />} />
-            <Route path='/' element={<MovieList />} />
-          </Routes>
-        </BrowserRouter>
-      </Suspense>
-      <Footer />
-    </Fragment>
+    <QueryClientProvider client={queryClient}>
+      <Fragment>
+        <Suspense fallback={<div>Loading...</div>}>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path='/:movieId' element={<MovieDetail />} />
+              <Route path='/' element={<MovieList />} />
+            </Routes>
+          </BrowserRouter>
+        </Suspense>
+        <Footer />
+      </Fragment>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   )
 }
 
