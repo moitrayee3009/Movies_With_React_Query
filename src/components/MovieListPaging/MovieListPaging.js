@@ -3,12 +3,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Previous, Next, Paging, PageNumber } from './MovieListPagingStyle'
 
-const MovieListPaging = ({
-  setCurrentPageNumber,
-  currentPageNumber,
-  pageList,
-  setPageList
-}) => {
+const MovieListPaging = ({ setCurrentPageNumber, currentPageNumber }) => {
+  // currentPage 1 = [1,2,3,4,5,6,7,8,9,10]
+  // currentPage 5 = [1,2,3,4,5,6,7,8,9,10]
+  // currentPage 7 = [3,4,5,6,7,8,9,10,11,12]
+  const min = Math.max(1, currentPageNumber - 5)
+  const pageList = new Array(10).fill(0).map((_, index) => {
+    return min + index
+  })
+
+  console.log(pageList)
   //const [pageList, setPageList] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
   // const [selectedPageNumber, setSelectedPageNumber] = useState(currentPageNumber)
 
@@ -31,24 +35,24 @@ const MovieListPaging = ({
   const managePageList = (pageNum) => {
     // debugger
     setCurrentPageNumber(pageNum)
-    //setSelectedPageNumber(pageNum)
+    //   //setSelectedPageNumber(pageNum)
 
-    let maxNumber = Math.max(...pageList)
-    let minNumber = Math.min(...pageList)
+    //   let maxNumber = Math.max(...pageList)
+    //   let minNumber = Math.min(...pageList)
 
-    if (pageNum === maxNumber) {
-      setPageList(
-        pageList.map((item) => {
-          return item + 5
-        })
-      )
-    } else if (pageNum === minNumber && pageNum >= 6) {
-      setPageList(
-        pageList.map((item) => {
-          return item - 5
-        })
-      )
-    }
+    //   if (pageNum === maxNumber) {
+    //     setPageList(
+    //       pageList.map((item) => {
+    //         return item + 5
+    //       })
+    //     )
+    //   } else if (pageNum === minNumber && pageNum >= 6) {
+    //     setPageList(
+    //       pageList.map((item) => {
+    //         return item - 5
+    //       })
+    //     )
+    //   }
   }
 
   return (
